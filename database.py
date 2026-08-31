@@ -19,7 +19,7 @@ def criar_tabela():
             ano INTEGER,
             placa TEXT,
             diaria REAL,
-            disponibilidade TEXT
+            status TEXT
         )
     """)
 
@@ -34,9 +34,9 @@ def cadastrar_veiculo(marca, modelo, ano, placa,diaria, disponibilidade ):
     cursor = conexao.cursor()
 
     cursor.execute("""
-        INSERT INTO veiculos (marca, modelo, ano, placa, diaria, disponibilidade)
+        INSERT INTO veiculos (marca, modelo, ano, placa, diaria, status)
         VALUES (?, ?, ?, ?, ? ,?)
-    """, (marca, modelo, ano, placa, diaria, disponibilidade))
+    """, (marca, modelo, ano, placa, diaria, status))
 
     conexao.commit()
     conexao.close()
