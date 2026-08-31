@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import database as db
 
 st.set_page_config(
