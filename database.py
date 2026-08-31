@@ -2,7 +2,7 @@ import sqlite3
 
 
 def conectar():
-    return sqlite3.connect("locadora.db")
+    return sqlite3.connect("locadora_novo.db")
 
 
 def criar_tabela():
