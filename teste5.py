@@ -36,8 +36,8 @@ if menu == "Cadastrar veículo":
     )
     placa = st.text_input("Placa")
     diaria = st.number_input("Valor diária")
-    disponibilidade = st.selectbox("Status", ["Disponível", "Locado","Em manutenção"]
-                                  )
+    status = st.selectbox("Status", ["Disponível", "Locado","Em manutenção"])
+                                  
                 
     
    
@@ -52,7 +52,7 @@ if menu == "Cadastrar veículo":
                 int(ano),
                 placa,
                 diaria,
-                disponibilidade 
+                status 
             )
 
             st.success("Veículo cadastrado com sucesso!")
@@ -98,14 +98,14 @@ elif menu == "Consultar veículos":
             modelo = str(veiculo[2])
             marca = str(veiculo[1])
             diaria = str(veiculo[5])
-            disponibilidade = str(veiculo[6])
+            status = str(veiculo[6])
 
             if (
                 filtro_placa.lower() in placa.lower()
                 and filtro_modelo.lower() in modelo.lower()
                 and filtro_marca.lower() in marca.lower()
                 and filtro_diaria.lower() in diaria.lower()
-                and filtro_disponibilidade.lower() in disponibilidade.lower()
+                and filtro_disponibilidade.lower() in status.lower()
             ):
                 veiculos_filtrados.append(veiculo)
 
