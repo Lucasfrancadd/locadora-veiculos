@@ -36,8 +36,8 @@ if menu == "Cadastrar veículo":
     )
     placa = st.text_input("Placa")
     diaria = st.number_input("Valor diária")
-    disponibilidade = st.selectbox("disponibilidade"
-                                  ["top", "center", "bottom"], index=2)
+    disponibilidade = st.text_input("disponibilidade")
+                
     
    
 
