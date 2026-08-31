@@ -36,7 +36,7 @@ if menu == "Cadastrar veículo":
     )
     placa = st.text_input("Placa")
     diaria = st.number_input("Valor diária")
-    disponibilidade = st.selectbox("disponibilidade", ["Disponível", "Locado"]
+    disponibilidade = st.selectbox("Status", ["Disponível", "Locado","Em manutenção"]
                                   )
                 
     
@@ -73,17 +73,17 @@ elif menu == "Consultar veículos":
     col1, col2, col3, col4,col5 = st.columns(5)
 
     with col1:
-        filtro_placa = st.text_input("Filtrar por placa")
+        filtro_placa = st.text_input("Filtrar por Placa")
 
     with col2:
-        filtro_modelo = st.text_input("Filtrar por modelo")
+        filtro_modelo = st.text_input("Filtrar por Modelo")
 
     with col3:
-        filtro_marca = st.text_input("Filtrar por marca")
+        filtro_marca = st.text_input("Filtrar por Marca")
     with col4:
-          filtro_diaria= st.text_input("Filtrar por valor")
+          filtro_diaria= st.text_input("Filtrar por Valor")
     with col5:
-          filtro_disponibilidade = st.text_input("Filtrar por disponibilidade")
+          filtro_disponibilidade = st.text_input("Filtrar por Status")
 
 
     if veiculos:
@@ -118,9 +118,9 @@ elif menu == "Consultar veículos":
                 "Marca": veiculo[1],
                 "Modelo": veiculo[2],
                 "Ano": veiculo[3],
-                "placa": veiculo[4],
-                "diaria": f"{veiculo[5]:.2f}",
-                "disponibilidade": veiculo[6]
+                "Placa": veiculo[4],
+                "Diaria": f"{veiculo[5]:.2f}",
+                "Status": veiculo[6]
             })
 
         st.table(tabela)
