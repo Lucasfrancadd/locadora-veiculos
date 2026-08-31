@@ -115,12 +115,12 @@ elif menu == "Consultar veículos":
         for veiculo in veiculos_filtrados:
             tabela.append({
                 "ID": veiculo[0],
-                "Marca": veiculo[1],
-                "Modelo": veiculo[2],
+                "Marca": veiculo[1].upper(),
+                "Modelo": veiculo[2].upper(),
                 "Ano": veiculo[3],
-                "Placa": veiculo[4],
+                "Placa": veiculo[4].upper(),
                 "Diaria": f"{veiculo[5]:.2f}",
-                "Status": veiculo[6]
+                "Status": veiculo[6].upper()
             })
 
         st.table(tabela)
