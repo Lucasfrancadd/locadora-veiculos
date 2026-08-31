@@ -27,7 +27,7 @@ def criar_tabela():
     conexao.close()
 
 
-def cadastrar_veiculo(marca, modelo, ano, placa,diaria, disponibilidade ):
+def cadastrar_veiculo(marca, modelo, ano, placa,diaria, status):
 
     conexao = conectar()
 
